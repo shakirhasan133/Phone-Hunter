@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Daisy UI CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="h-[500px] bg-[#0D6EFD0D]">
+      <section class="container mx-auto">
+        <nav class="flex justify-between items-center py-3 px-4 md:px-0">
+          <div class="logo">
+            <h2 class="font-bold text-2xl">Hot Gadgets</h2>
+          </div>
+          <div class="signup">
+            <button class="btn btn-primary bg-[#0D6EFD] font-bold text-white">
+              Sign Up
+            </button>
+          </div>
+        </nav>
+      </section>
+
+      <!-- Hero Area -->
+      <section>
+        <div
+          class="flex flex-col items-center w-full md:w-6/12 mx-auto text-center gap-4 mt-4"
+        >
+          <h1 class="font-bold text-xl md:text-5xl">Apple Iphone 13 Pro Max</h1>
+          <p>
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humou.
+          </p>
+          <button
+            class="btn btn-primary rounded-md bg-[#0D6EFD] font-bold text-white"
+          >
+            Buy Now
+          </button>
+        </div>
+      </section>
+
+      <section class="mx-auto w-8/12 flex items-center">
+        <img src="./assets/cover.png" alt="" class="max-w-6/12 mx-auto" />
+      </section>
+    </header>
+
+    <main class="container mx-auto mt-0 md:mt-24 py-3 md:py-10">
+      <section class="flex flex-col items-center w-full md:w-10/12 mx-auto">
+        <div>
+          <h1 class="font-bold text-2xl py-5">Search your phone</h1>
+        </div>
+        <div class="w-full md:w-6/12 px-4 md:px-0">
+          <div class="flex md:flex-row flex-col gap-2 md:gap-0">
+            <label
+              class="input input-bordered flex items-center gap-2 md:flex-1 bg-[#100F0F0D] rounded-[8px] outline-none focus:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="h-4 w-4 opacity-70"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <input
+                id="searctInput"
+                type="text"
+                class="w-full focus:outline-none border-none"
+                placeholder="Search your phone"
+              />
+            </label>
+            <button
+              onclick="handleSearcBtn()"
+              class="btn btn-primary bg-[#0D6EFD] text-white rounde-[8px] px-6"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex items-center justify-center my-5">
+        <div id="loader" class="loader hidden"></div>
+      </section>
+
+      <section
+        id="productSection"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-4"
+      ></section>
+
+      <section id="seeMore" class="container mx-auto my-10"></section>
+    </main>
+    <footer class="bg-[#0D6EFD0D] bottom-0 py-10">
+      <section class="mx-auto container">
+        <div class="flex justify-between flex-col md:flex-row items-center">
+          <div>
+            <h2 class="font-bold text-2xl">Hot Gadgets</h2>
+            <p>You can definitely work.</p>
+          </div>
+          <div class="flex items-center gap-3 flex-col md:flex-row">
+            <svg
+              width="40.000000"
+              height="40.000000"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs />
+              <rect
+                id="Rectangle 3972"
+                rx="20.000000"
+                width="40.000000"
+                height="40.000000"
+                fill="#FFFFFF"
+                fill-opacity="1.000000"
+              />
+              <path
+                id="f"
+                d="M24.34 21.6L24.86 18.19L21.62 18.19L21.62 15.98C21.62 15.04 22.07 14.13 23.52 14.13L25 14.13L25 11.23C25 11.23 23.66 11 22.38 11C19.71 11 17.96 12.63 17.96 15.59L17.96 18.19L15 18.19L15 21.6L17.96 21.6L17.96 29.85C18.56 29.95 19.17 30 19.79 30C20.41 30 21.02 29.95 21.62 29.85L21.62 21.6L24.34 21.6Z"
+                fill="#3B599C"
+                fill-opacity="1.000000"
+                fill-rule="nonzero"
+              />
+            </svg>
+
+            <svg
+              width="40.000000"
+              height="40.000000"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs />
+              <rect
+                id="Rectangle 3973"
+                rx="20.000000"
+                width="40.000000"
+                height="40.000000"
+                fill="#FFFFFF"
+                fill-opacity="1.000000"
+              />
+              <path
+                id="twitter"
+                d="M16.96 27C14.76 27 12.72 26.42 11 25.43C12.46 25.52 15.04 25.32 16.64 23.94C14.23 23.84 13.14 22.18 13 21.47C13.2 21.54 14.18 21.63 14.73 21.43C11.96 20.8 11.53 18.62 11.62 17.95C12.15 18.28 13.03 18.39 13.38 18.36C10.79 16.7 11.72 14.2 12.18 13.66C14.03 15.97 16.82 17.27 20.26 17.34C20.2 17.08 20.16 16.82 20.16 16.54C20.16 14.58 21.93 13 24.11 13C25.25 13 26.27 13.43 26.99 14.12C27.75 13.96 28.9 13.59 29.46 13.26C29.18 14.17 28.3 14.93 27.77 15.21C28.23 15.15 29.5 14.93 30 14.63C29.75 15.14 28.82 15.99 28.05 16.46C28.2 22.09 23.4 27 16.96 27Z"
+                fill="#58A7DE"
+                fill-opacity="1.000000"
+                fill-rule="nonzero"
+              />
+            </svg>
+
+            <svg
+              width="40.000000"
+              height="40.000000"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <desc>Created with Pixso.</desc>
+              <defs>
+                <linearGradient
+                  x1="20.500000"
+                  y1="11.000000"
+                  x2="20.500000"
+                  y2="30.000000"
+                  id="paint_linear_1_224_0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0.062500" stop-color="#D82D7E" />
+                  <stop offset="1.000000" stop-color="#FBA756" />
+                </linearGradient>
+              </defs>
+              <rect
+                id="Rectangle 3974"
+                rx="20.000000"
+                width="40.000000"
+                height="40.000000"
+                fill="#FFFFFF"
+                fill-opacity="1.000000"
+              />
+              <path
+                id="instagram"
+                d="M11.62 14.11C11 15.33 11 16.92 11 20.12L11 20.88C11 24.07 11 25.66 11.62 26.88C12.16 27.96 13.03 28.83 14.11 29.37C15.33 30 16.92 30 20.12 30L20.87 30C24.07 30 25.66 30 26.88 29.37C27.96 28.83 28.83 27.96 29.37 26.88C30 25.66 30 24.07 30 20.88L30 20.12C30 16.92 30 15.33 29.37 14.11C28.83 13.03 27.96 12.16 26.88 11.62C25.66 11 24.07 11 20.87 11L20.12 11C16.92 11 15.33 11 14.11 11.62C13.03 12.16 12.16 13.03 11.62 14.11ZM20.87 12.9L20.12 12.9C18.49 12.9 17.38 12.9 16.53 12.97C15.69 13.03 15.27 13.16 14.97 13.31C14.25 13.67 13.67 14.25 13.31 14.97C13.16 15.27 13.03 15.69 12.97 16.53C12.9 17.38 12.89 18.49 12.89 20.12L12.89 20.88C12.89 22.5 12.9 23.61 12.97 24.46C13.03 25.3 13.16 25.72 13.31 26.02C13.67 26.74 14.25 27.32 14.97 27.68C15.27 27.83 15.69 27.96 16.53 28.02C17.38 28.09 18.49 28.1 20.12 28.1L20.87 28.1C22.5 28.1 23.61 28.09 24.46 28.02C25.3 27.96 25.72 27.83 26.02 27.68C26.74 27.32 27.32 26.74 27.68 26.02C27.83 25.72 27.96 25.3 28.02 24.46C28.09 23.61 28.1 22.5 28.1 20.88L28.1 20.12C28.1 18.49 28.09 17.38 28.02 16.53C27.96 15.69 27.83 15.27 27.68 14.97C27.32 14.25 26.74 13.67 26.02 13.31C25.72 13.16 25.3 13.03 24.46 12.97C23.61 12.9 22.5 12.9 20.87 12.9ZM27.14 15.27C27.14 16.06 26.51 16.7 25.72 16.7C24.93 16.7 24.3 16.06 24.3 15.27C24.3 14.48 24.93 13.85 25.72 13.85C26.51 13.85 27.14 14.48 27.14 15.27ZM20.5 25.25C23.12 25.25 25.25 23.12 25.25 20.5C25.25 17.87 23.12 15.75 20.5 15.75C17.87 15.75 15.75 17.87 15.75 20.5C15.75 23.12 17.87 25.25 20.5 25.25ZM20.5 23.35C22.07 23.35 23.35 22.07 23.35 20.5C23.35 18.92 22.07 17.65 20.5 17.65C18.92 17.65 17.64 18.92 17.64 20.5C17.64 22.07 18.92 23.35 20.5 23.35Z"
+                fill="url(#paint_linear_1_224_0)"
+                fill-opacity="1.000000"
+                fill-rule="evenodd"
+              />
+            </svg>
+
+            <button
+              class="btn btn-primary bg-[#0D6EFD] text-white rounde-[8px]"
+            >
+              Join Premium
+            </button>
+          </div>
+        </div>
+        <hr class="mt-6" />
+      </section>
+
+      <section
+        class="grid md:grid-cols-4 grid-cols-1 container mx-auto justify-between my-6 text-center md:text-left gap-4"
+      >
+        <ul>
+          <li><a href="">Product</a></li>
+          <li><a href=""></a>Browse</li>
+          <li><a href="">Remote Job</a></li>
+          <li><a href="">Startup Job</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Popular</a></li>
+          <li><a href="">UIUX Design</a></li>
+          <li><a href="">Product Design</a></li>
+          <li><a href="">Startup Job</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Product</a></li>
+          <li><a href=""></a>Browse</li>
+          <li><a href="">Remote Job</a></li>
+          <li><a href="">Startup Job</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Product</a></li>
+          <li><a href=""></a>Browse</li>
+          <li><a href="">Remote Job</a></li>
+          <li><a href="">Startup Job</a></li>
+        </ul>
+      </section>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
